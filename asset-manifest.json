@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ImageTextEdition/static/css/main.bdd8e4d7.chunk.css",
-    "main.js": "/ImageTextEdition/static/js/main.0b019779.chunk.js",
-    "main.js.map": "/ImageTextEdition/static/js/main.0b019779.chunk.js.map",
+    "main.js": "/ImageTextEdition/static/js/main.a776ef91.chunk.js",
+    "main.js.map": "/ImageTextEdition/static/js/main.a776ef91.chunk.js.map",
     "runtime-main.js": "/ImageTextEdition/static/js/runtime-main.ed8bf623.js",
     "runtime-main.js.map": "/ImageTextEdition/static/js/runtime-main.ed8bf623.js.map",
     "static/js/2.1c23c4ec.chunk.js": "/ImageTextEdition/static/js/2.1c23c4ec.chunk.js",
     "static/js/2.1c23c4ec.chunk.js.map": "/ImageTextEdition/static/js/2.1c23c4ec.chunk.js.map",
     "index.html": "/ImageTextEdition/index.html",
-    "precache-manifest.ddb8a9a0235c06ba5f83537aba2fcc88.js": "/ImageTextEdition/precache-manifest.ddb8a9a0235c06ba5f83537aba2fcc88.js",
+    "precache-manifest.cd6193e8ba4725c2d61f585f2fb221db.js": "/ImageTextEdition/precache-manifest.cd6193e8ba4725c2d61f585f2fb221db.js",
     "service-worker.js": "/ImageTextEdition/service-worker.js",
     "static/css/main.bdd8e4d7.chunk.css.map": "/ImageTextEdition/static/css/main.bdd8e4d7.chunk.css.map",
     "static/js/2.1c23c4ec.chunk.js.LICENSE.txt": "/ImageTextEdition/static/js/2.1c23c4ec.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.ed8bf623.js",
     "static/js/2.1c23c4ec.chunk.js",
     "static/css/main.bdd8e4d7.chunk.css",
-    "static/js/main.0b019779.chunk.js"
+    "static/js/main.a776ef91.chunk.js"
   ]
 }

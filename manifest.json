@@ -18,6 +18,16 @@
         "sizes": "512x512"
       }
     ],
+    "share_target":
+  {
+    "action": "/share",
+    "params":
+    {
+      "title": "Image Text Edition",
+      "text": "Add text over Image",
+      "url": "url"
+    }
+  },
     "start_url": ".",
     "display": "standalone",
     "theme_color": "#000000",

@@ -1,0 +1,120 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color:#eae4e4;
+}
+h1, p {
+  font-family: Lato;
+}
+.webshare{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.4em;
+  background-color: rgba(1,0,0,0);
+  font-size: 1.4rem;
+}
+.shadow {
+  background-color: rgba(0,0,0,0);
+}
+
+.canvas-container{
+  overflow-x: auto;
+  padding:0.5rem;
+}
+.canvas{
+  border: 1px solid red;
+}
+
+.modal{
+  background-color: rgba(0,0,0,1);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem;
+  height: 100vh;
+   /* width: 80vh; */
+    /* margin: 0 auto; */
+    position: fixed;
+    top: 0;
+    background-color: #eae4e4;
+}
+.form-field{
+  display: flex;
+  margin: 0.2em;
+}
+.form-field label{
+  flex-basis: 100px;
+}
+.form-field input{
+  flex: 1;
+  padding: 0.5rem;
+}
+.close span{
+  float: right;
+    border-radius: 50%;
+    background-color: gray;
+    padding: 0.5rem;
+    text-align: center;
+    color: red;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color  0.5s ease-in;
+}
+.close span:hover{
+  background-color: rgb(179, 174, 174);
+}
+
+/* css bootstrap tpe design */
+h3{
+  /* background-color: rgb(18, 2, 54); */
+  margin-bottom: 0.5em;
+  padding: 0.5rem;
+  color:#f2f0ec;
+  letter-spacing: 1px;
+  font-weight: 600;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 4%, rgba(253,29,29,1) 65%, rgba(252,176,69,1) 100%);
+}
+.input-label{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1em 0.5em 0.5em;
+  align-items: flex-end;
+  letter-spacing: 1px;
+}
+.input-label-action-button{
+  display: flex;
+}
+.btn-primary {
+  color: rgb(245, 245, 252);
+ /* background-color: rgb(68, 4, 4); 
+  background: rgb(36,0,13);
+background: linear-gradient(119deg, rgba(36,0,13,1) 40%, rgba(9,121,59,1) 99%); */
+background-color: #3ab452;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+}
+.btn-text{
+  background: rgb(36,0,32);
+  background: linear-gradient(119deg, rgba(36,0,32,1) 40%, rgba(12,9,121,1) 99%);
+}
+.btn-save{
+  background-color: #240020 !important;
+
+}

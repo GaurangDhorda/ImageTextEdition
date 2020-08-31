@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bca09beb82f0fa40c80a4ca9fbba89fe",
+    "revision": "327a8ffc5a418916d8854b2c701b669f",
     "url": "/ImageTextEdition/index.html"
   },
   {
-    "revision": "100bd1c03aba62b10e71",
+    "revision": "79292710088b4798623f",
     "url": "/ImageTextEdition/static/css/main.bdd8e4d7.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ImageTextEdition/static/js/2.1c23c4ec.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "100bd1c03aba62b10e71",
-    "url": "/ImageTextEdition/static/js/main.852b9ef9.chunk.js"
+    "revision": "79292710088b4798623f",
+    "url": "/ImageTextEdition/static/js/main.0b019779.chunk.js"
   },
   {
     "revision": "cfd2426959b9a5b7b425",

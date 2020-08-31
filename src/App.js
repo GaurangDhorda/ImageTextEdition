@@ -149,7 +149,7 @@ const fillCanvasBackgroundWithColor = (canvas, color)  => {
 }
   return (
     <div>
-      <h3>Image Text Edition </h3>
+      <h3>Image Text Edition file / </h3>
       {(isMobile  && save) && <WebShare blob={newBlob} /> }
        
       <div className="input-label">

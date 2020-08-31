@@ -1,5 +1,5 @@
 {  
-  "homepage": "http://gaurangdhorda.github.io/ImageTextEdition",
+  "homepage": "http://gaurangdhorda.github.io/ImageTextEdition/",
   "name": "imageeditor",
   "version": "0.0.0",
   "private": true,
@@ -12,6 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build-localhost": "process.env.PUBLIC_URL=/ react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "start-sw": "http-server ./build",

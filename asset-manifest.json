@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ImageTextEdition/static/css/main.bdd8e4d7.chunk.css",
+    "main.js": "/ImageTextEdition/static/js/main.13464721.chunk.js",
+    "main.js.map": "/ImageTextEdition/static/js/main.13464721.chunk.js.map",
+    "runtime-main.js": "/ImageTextEdition/static/js/runtime-main.ed8bf623.js",
+    "runtime-main.js.map": "/ImageTextEdition/static/js/runtime-main.ed8bf623.js.map",
+    "static/js/2.1c23c4ec.chunk.js": "/ImageTextEdition/static/js/2.1c23c4ec.chunk.js",
+    "static/js/2.1c23c4ec.chunk.js.map": "/ImageTextEdition/static/js/2.1c23c4ec.chunk.js.map",
+    "index.html": "/ImageTextEdition/index.html",
+    "precache-manifest.52f712ac09ba116b324507e9e4e0e9a0.js": "/ImageTextEdition/precache-manifest.52f712ac09ba116b324507e9e4e0e9a0.js",
+    "service-worker.js": "/ImageTextEdition/service-worker.js",
+    "static/css/main.bdd8e4d7.chunk.css.map": "/ImageTextEdition/static/css/main.bdd8e4d7.chunk.css.map",
+    "static/js/2.1c23c4ec.chunk.js.LICENSE.txt": "/ImageTextEdition/static/js/2.1c23c4ec.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed8bf623.js",
+    "static/js/2.1c23c4ec.chunk.js",
+    "static/css/main.bdd8e4d7.chunk.css",
+    "static/js/main.13464721.chunk.js"
+  ]
+}

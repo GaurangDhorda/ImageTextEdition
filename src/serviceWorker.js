@@ -20,6 +20,15 @@ const isLocalhost = Boolean(
     )
 );
 
+window.addEventListener('fetch', (event) => {
+  alert('addEventListner');
+    const url = new URL(event.request.url);
+    if(url.origin === window.location.origin && url.pathname === '/share-target' && event.request.method === 'POST'){
+      handleFileShare(event);
+      alert('handle-function-called ', event);
+    }
+});
+
 export function register(config) {
   
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
@@ -52,7 +61,18 @@ export function register(config) {
         registerValidSW(swUrl, config);
       }
     });
+
   }
+}
+
+function handleFileShare(event) {
+  event.respondWith(Response.redirect('./'));
+  event.waitUntill (async function (){
+    const data = await event.request.formData();
+    const client = await window.self.clients.get(event.resultingClientId);
+    const file = data.get('file');
+    client.postMessage({file});
+  }());
 }
 
 function registerValidSW(swUrl, config) {

@@ -11,6 +11,7 @@ export default function App() {
   const [save, setSave] = useState(false);
   const [blob, setBlob] = useState();
   const [newBlob ,setNewBlob] = useState();
+  const [editedNewBlob, setEditedNewBlob] = useState();
   const [isMobile] = useMobileDevice();
   
   const [fields,setFields] = useState({'pieces':'', 'size':'', 'weight':'','stamp':''});
@@ -23,7 +24,41 @@ export default function App() {
     if(src) add() ;
   },[fields])
 
-  
+  useEffect(() => {
+      navigator.serviceWorker.onmessage = (event) =>{
+      
+      const file = event.data.file;
+      const img = new Image();
+      const url = URL.createObjectURL(file);
+      img.src = url;
+      //document.body.appendChild(img);
+      addFileFromDeviceToCanvas(file);
+      
+    }
+  },[]);
+
+  const addFileFromDeviceToCanvas = (file) => {
+    alert('add-file-from-device');
+    if (file){
+      alert('INSIDE : - add-file-from-device');
+      setNewBlob(file);
+      setFields({'pieces' : '', 'size': '', 'weight':'', 'stamp':''});
+      Resizer.imageFileResizer(
+        file,
+        250,
+        250,
+        'JPEG',
+        130,
+        0,
+        uri => {      
+            setSrc(uri);
+        },
+        'base64',
+        250,
+        250,
+    );
+  }  
+  }
 
   const drawImageOnCanvas = () =>{
     let img = document.getElementById('img');
@@ -40,7 +75,7 @@ export default function App() {
             fileInput = true
             setNewBlob(event.target.files[0]);
         }
-        if(fileInput) {
+        if(fileInput  ) {
           setFields({'pieces' : '', 'size': '', 'weight':'', 'stamp':''});
             Resizer.imageFileResizer(
                 event.target.files[0],
@@ -60,7 +95,10 @@ export default function App() {
         }
     }
     const add = () =>{
-      
+      let copyCanvas = document.getElementById('copyCanvas');
+      let copyCtx = copyCanvas.getContext('2d');
+      copyCtx.clearRect(0,0, copyCanvas.width, copyCanvas.height);
+
       let canvas = document.getElementById('canvas');
       let context = canvas.getContext('2d');
       context.clearRect(0,0,canvas.width,canvas.height);
@@ -89,8 +127,9 @@ export default function App() {
       let copyCtx = copyCanvas.getContext('2d');
       
        let img = new Image();
-
+       copyCtx.clearRect(0,0, copyCanvas.width, copyCanvas.height);
         img.onload = function(){
+          copyCtx.clearRect(0,0, copyCanvas.width, copyCanvas.height);
           copyCanvas.width = img.width - 250;
           copyCanvas.width += 800; 
           copyCanvas.height = img.height;
@@ -103,10 +142,11 @@ export default function App() {
       copyCtx.fillText('W/G: ' + fields.weight + ' grm', copyCanvas.width - 540, 240);
       copyCtx.fillText( 'stamp: ' + fields.stamp, copyCanvas.width - 540, 290);
       
-      copyCanvas.toBlob((b) => setNewBlob(b));
+      copyCanvas.toBlob((b) => setEditedNewBlob(b));
         }
 
       img.src = URL.createObjectURL(newBlob);
+      
     }
 const  downloadImage = ()  => {
     let data
@@ -149,8 +189,8 @@ const fillCanvasBackgroundWithColor = (canvas, color)  => {
 }
   return (
     <div>
-      <h3>Image Text Edition file / </h3>
-      {(isMobile  && save) && <WebShare blob={newBlob} /> }
+      <h3>Image Text Edition </h3>
+      {(isMobile  && save) && <WebShare blob={editedNewBlob} /> }
        
       <div className="input-label">
       <label htmlFor="fileUpload" className="btn-primary"> Open File </label>
@@ -163,7 +203,7 @@ const fillCanvasBackgroundWithColor = (canvas, color)  => {
       </div>
     </div>
       <input id="fileUpload" type="file" onChange = {fileChangedHandler} accept="image/*" hidden />
-      <img id ='img' src = {src} hidden  />
+      <img id ='img' src = {src}  hidden />
       <canvas id="copyCanvas" hidden  />
       <div className="canvas-container">
           {src ? ( 

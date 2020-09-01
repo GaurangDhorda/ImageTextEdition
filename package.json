@@ -12,7 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build-localhost": "process.env.PUBLIC_URL=/ react-scripts build",
+    "build-localhost": "http-server react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "start-sw": "http-server ./build",

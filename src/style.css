@@ -43,12 +43,11 @@ h1, p {
   display: flex;
   flex-direction: column;
   padding: 0.6rem;
-  height: 100vh;
-   /* width: 80vh; */
-    /* margin: 0 auto; */
-    position: fixed;
-    top: 0;
-    background-color: #eae4e4;
+  /* height: 100vh; */
+  width: 90vw;
+  /* margin: 0 auto; */
+  position: fixed;
+  background-color: #eae4e4;
 }
 .form-field{
   display: flex;
@@ -60,6 +59,7 @@ h1, p {
 .form-field input{
   flex: 1;
   padding: 0.5rem;
+  border: 1px gray solid;
 }
 .close span{
   float: right;
@@ -79,23 +79,38 @@ h1, p {
 /* css bootstrap tpe design */
 h3{
   /* background-color: rgb(18, 2, 54); */
+  position: sticky;
+  top: 0;
+  width: 100%;
   margin-bottom: 0.5em;
   padding: 0.5rem;
   color:#f2f0ec;
   letter-spacing: 1px;
   font-weight: 600;
-  background: rgb(131,58,180);
   background: linear-gradient(90deg, rgba(131,58,180,1) 4%, rgba(253,29,29,1) 65%, rgba(252,176,69,1) 100%);
+  box-shadow: 0px 1px 2px 1px #000;
+  -moz-box-shadow: 0px 1px 2px 1px #000;
+  -webkit-box-shadow: 0px 1px 2px 1px #000;
 }
 .input-label{
   display: flex;
   justify-content: space-between;
-  margin: 0 1em 0.5em 0.5em;
+  margin: 0 1em 0 0;
   align-items: flex-end;
   letter-spacing: 1px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: .5rem;
+  background-color: darkseagreen;
+  box-shadow: 3px 3px 5px 4px #000;
+  -moz-box-shadow:    3px 3px 5px 4px#000;
+  -webkit-box-shadow: 3px 3px 5px 4px #000;
 }
 .input-label-action-button{
   display: flex;
+  background-color: transparent;
+  margin-right: 0.5em;
 }
 .btn-primary {
   color: rgb(245, 245, 252);
@@ -109,6 +124,18 @@ background-color: #3ab452;
   padding: 0.5rem;
   outline: none;
   border: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  /* Smartphones and touchscreens */
+  .btn-primary:hover{
+    background-color: tomato !important;
+  }
+  .btn-text:hover{
+    background-color: tomato !important;
+  }
+  .webshare:hover{
+    color: rgb(124, 89, 241) !important;
+  }
 }
 .btn-text{
   background: rgb(36,0,32);

@@ -122,7 +122,7 @@ export default function App() {
       fillCanvasBackgroundWithColor(canvas, 'white');
       canvas.toBlob((b) => setBlob(b));
 
-      console.log('blob us ', blob);
+      
 
       let copyCanvas = document.getElementById('copyCanvas');
       let copyCtx = copyCanvas.getContext('2d');

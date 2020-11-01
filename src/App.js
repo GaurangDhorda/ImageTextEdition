@@ -127,7 +127,7 @@ export default function App() {
       let copyCtx = copyCanvas.getContext('2d');
       
        let img = new Image();
-      // copyCtx.clearRect(0,0, copyCanvas.width, copyCanvas.height);
+     // // copyCtx.clearRect(0,0, copyCanvas.width, copyCanvas.height);
         img.onload = function(){
           copyCtx.clearRect(0,0, copyCanvas.width, copyCanvas.height);
           copyCanvas.width = img.width - 250;
